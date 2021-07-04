@@ -4,4 +4,4 @@ select id as payment_id
        ,status
        ,amount/100 as amount
        ,created as created_at
-  from bvadhia_de_test.stripe.payment
+  from {{ source('stripe', 'payment') }}

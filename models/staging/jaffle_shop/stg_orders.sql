@@ -4,4 +4,4 @@ select
     order_date,
     status
 
-from bvadhia_de_test.jaffle_shop.orders
+from {{ source('jaffle_shop', 'orders') }}
